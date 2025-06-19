@@ -30,20 +30,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![desktop](./desktop.png)
+![mobile](./mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-interactive-rating-component-3lWhbFIRef](https://www.frontendmentor.io/solutions/responsive-interactive-rating-component-3lWhbFIRef)
+- Live Site URL: [https://fr-ux-en.github.io/interactive-rating-component/](https://fr-ux-en.github.io/interactive-rating-component/)
 
 ## My process
 
@@ -54,9 +47,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- SCSS
 
 ### What I learned
 
@@ -65,23 +56,30 @@ Use this section to recap over some of your major learnings while working throug
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<form
+  id="rating-form"
+  aria-labelledby="rating-heading"
+>
+  <h1 id="rating-heading">How did we do?</h1>
+</form>
+<legend class="sr-only">Rate your experience from 1 to 5</legend>
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
-};
 ```
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- LinkedIn - [Daniel Lee](https://www.linkedin.com/in/uniqueimaginate/)
+- Frontend Mentor - [@FR-UX-EN](https://www.frontendmentor.io/profile/FR-UX-EN)

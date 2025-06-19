@@ -7,7 +7,6 @@ const thankYouState = document.querySelector('.thank-you-state');
 
 function getSelectedRating() {
     const selectedRating = document.querySelector('input[type="radio"]:checked');
-    console.log(selectedRating);
     return selectedRating ? selectedRating.value : null;
 }
 
