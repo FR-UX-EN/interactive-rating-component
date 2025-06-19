@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Rating state start -->
+  <div class="rating-state">
+    <img src=" images/icon-star.svg" alt="star icon">
+
+
+    <form id="rating-form" aria-labelledby="rating-heading">
+      <h1 id="rating-heading">How did we do?</h1>
+
+      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+        offering!</p>
+      <fieldset>
+        <legend class="sr-only">Rate your experience from 1 to 5</legend>
+        <div class="radio-group">
+          <div class="radio-item">
+            <input type="radio" name="rating" id="rating-1" value="1">
+            <label for="rating-1">1</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" name="rating" id="rating-2" value="2">
+            <label for="rating-2">2</label>
+          </div>
+
+          <div class="radio-item">
+            <input type="radio" name="rating" id="rating-3" value="3">
+            <label for="rating-3">3</label>
+          </div>
+
+          <div class="radio-item">
+            <input type="radio" name="rating" id="rating-4" value="4">
+            <label for="rating-4">4</label>
+
+          </div>
+
+          <div class="radio-item">
+            <input type="radio" name="rating" id="rating-5" value="5">
+            <label for="rating-5">5</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+  </div>
+
+  </form>
+
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <div class="thank-you-state hidden">
+    <img src="images/illustration-thank-you.svg" alt="thank you illustration">
+    <p>You selected <span id="selected-rating"></span> out of 5</p>
+
+    <h2>Thank you!</h2>
+
+    <p>We appreciate you taking the time to give a rating. If you ever need more support,
+      don't hesitate to get in touch!</p>
+  </div>
+
+
+  <!-- Thank you state end -->
+
+
+</body>
+
+</html>

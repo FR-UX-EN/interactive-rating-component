@@ -1,0 +1,200 @@
+@use 'reset.scss';
+
+// Layout Widths
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+// Colors
+// Primary
+$color-orange-500: hsl(25, 97%, 53%);
+
+// Neutral
+$color-white: hsl(0, 100%, 100%);
+$color-grey-500: hsl(217, 12%, 63%);
+$color-grey-900: hsl(213, 19%, 18%);
+$color-grey-950: hsl(216, 12%, 8%);
+$container-top-color: #232833;
+$container-bottom-color: #181e28;
+
+// Typography
+$font-family-overpass: 'Overpass', sans-serif;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-size-body: 15px;
+
+@function rem($px) {
+  @return calc($px / 15) * 1rem;
+}
+
+@mixin desktop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-grey-950;
+  font-family: $font-family-overpass;
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+}
+
+.rating-state {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+  max-width: 20rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(
+    to bottom,
+    $container-top-color,
+    $container-bottom-color
+  );
+
+  img {
+    background-color: $color-grey-900;
+    padding: 0.75rem;
+    border-radius: 50%;
+  }
+
+  @include desktop {
+    max-width: 25rem;
+  }
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    color: $color-white;
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+  }
+
+  p {
+    color: $color-grey-500;
+  }
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 0rem;
+}
+
+.radio-item {
+  label {
+    font-weight: $font-weight-bold;
+    background-color: $color-grey-900;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-grey-500;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-orange-500;
+      color: $color-white;
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked + label {
+      background-color: $color-white;
+      color: $color-grey-950;
+    }
+  }
+}
+
+button[type='submit'] {
+  background-color: $color-orange-500;
+  color: $color-grey-950;
+  border-radius: 2rem;
+  padding: 0.8rem 1rem;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &:active {
+    background-color: $color-white;
+  }
+
+  &:hover {
+    background-color: $color-white;
+  }
+}
+
+.thank-you-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 20rem;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(
+    to bottom,
+    $container-top-color,
+    $container-bottom-color
+  );
+
+  img + p {
+    color: $color-orange-500;
+    background-color: $color-grey-900;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+  }
+
+  h2 {
+    color: $color-white;
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+  }
+
+  h2 + p {
+    text-align: center;
+    color: $color-grey-500;
+  }
+
+  @include desktop {
+    max-width: 25rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
